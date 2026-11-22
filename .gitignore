@@ -1,0 +1,16 @@
+# Large binary files
+*.kmb
+!submission/invsqrt.kmb
+!submission/dfthcsos/angle_k_*.kmb
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data
+*.zip
