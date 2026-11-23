@@ -1,0 +1,24 @@
+# Large seed approach: R=15, B=80, C=30, merge to R=5, shrink
+# This creates a factorization with R=5 groups (much cheaper heuristic costs)
+
+[df_init]
+R = 15
+B = 80
+C = 30
+fit = 5000
+assign = "roundrobin"
+
+[shrink]
+schedule = "240x90,200x75,170x60,150x50,130x45,120x40,100x35,80x30"
+merge = 3          # merge 15 groups by 3 → R=5
+pre = 3000
+fade = 500
+fit = 2000
+final = 6000
+kappa = 5e-5
+save = "120x40,100x35,80x30"
+device = true
+f32 = true
+
+[quantize]
+brot = 8

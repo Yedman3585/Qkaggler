@@ -1,0 +1,20 @@
+# GPU shrink: take pre-fitted ahoirg 9x143x42, shrink to smaller shapes
+# Run with: python run.py recipes/shrink_ahoirg_gpu.toml --out runs/shrink1
+
+[seed]
+file = "inputs/ahoirg_9x143x42.npz"
+
+[shrink]
+schedule = "135x41,130x40,125x39,120x38"
+merged = true
+pre = 0           # skip pre-fit (seed is already pre-fitted)
+fade = 500
+fit = 3000        # 3000 iters per intermediate step (GPU = fast)
+final = 8000      # 8000 iters for saved targets
+kappa = 5e-5
+save = "130x40,120x38"
+device = true     # use JAX packed-pair objective on GPU
+f32 = true        # float32 for T4 GPU speed (2x faster than f64)
+
+[quantize]
+brot = 8

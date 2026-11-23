@@ -1,0 +1,20 @@
+{
+  "id": "altynkhan/dfthc-gpu-sweep",
+  "title": "dfthc gpu sweep",
+  "code_file": "run.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "sohier/verifiable-circuit-compilation-starter-kit",
+    "dmitriigluzdov/vqcc-femoco-public-factorization",
+    "ahmedberatozer/df-thc-group-compression-factorization",
+    "marculera/dfthc-refit-structures"
+  ],
+  "competition_sources": [
+    "google-verifiable-quantum-circuit-compilation"
+  ],
+  "kernel_sources": []
+}

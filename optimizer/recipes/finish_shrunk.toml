@@ -1,0 +1,19 @@
+# Finish a shrunk factorization: round → polish → refine → refit → build
+# Usage: python run.py recipes/finish_shrunk.toml --start shrunk.npz
+
+[round]
+brot = 8
+
+[polish]
+passes = 3
+
+[refine]
+maxiter = 500
+
+[refit]
+target = 19.92
+maxiter = 3000
+
+[build]
+qrom = "four"
+shots = 64

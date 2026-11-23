@@ -1,0 +1,15 @@
+# Data files
+*.npz
+shrink_out/
+ahoirg_dataset/
+seed_*.npz
+
+# Kaggle kernel (generated)
+kaggle/run.py
+
+# Python
+__pycache__/
+*.pyc
+
+# Kickmix stub
+kickmix.py
